@@ -10,17 +10,19 @@ export type Entries<T extends Object> = {
   [K in keyof T]: [K, T[K]];
 }[keyof T];
 
-type Success<T> = {
+export type Success<T> = {
   success: true;
   data: T;
 };
 
-type Failure = {
+export type Failure<T> = {
   success: false;
-  data: null;
+  data: null | T;
 };
 
-export type Result<T> = Success<T> | Failure;
+export type Result<T> = Success<T> | Failure<T>;
+
+export type ResultData<T> = T extends Result<infer U> ? U : never;
 
 /* Playing Card */
 
