@@ -56,9 +56,11 @@ class PlayingCard {
       rank: this._rank,
       image: this._image,
       isShown: this._isShown,
-    } as const satisfies Readonly<PlayingCardProperties>;
+    } satisfies PlayingCardProperties;
   }
 }
+
+export const dummyCard = new PlayingCard(0, 2);
 
 type DeckOptions = {
   shuffle?: boolean;
@@ -95,25 +97,23 @@ export class Deck {
     }
   }
 
-  draw(): Result<
-    Readonly<{
-      card: Readonly<PlayingCardProperties>;
-      remaining: number;
-    }>
-  > {
+  draw(): Result<{
+    card: PlayingCardProperties;
+    remaining: number;
+  }> {
     const card = this._deck.pop();
     this._remaining -= 1;
     return card
-      ? ({
+      ? {
           success: true,
           data: {
             card: card.properties,
             remaining: this._remaining,
           },
-        } as const)
-      : ({
+        }
+      : {
           success: false,
           data: null,
-        } as const);
+        };
   }
 }
