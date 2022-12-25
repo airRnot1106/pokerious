@@ -40,6 +40,7 @@ module.exports = {
           './store/*',
           './types/*',
           './utils/*',
+          './libs/*',
           './*.vue',
         ],
       },
