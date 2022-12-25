@@ -17,6 +17,7 @@
     "@vueuse/core": "^9.7.0",
     "@vueuse/nuxt": "^9.7.0",
     "eslint": "^8.30.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-tailwindcss": "^3.7.1",
     "eslint-plugin-vue": "^9.8.0",
     "nuxt": "3.0.0",
