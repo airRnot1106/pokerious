@@ -37,21 +37,34 @@ export default () => {
 
   const hand = useState('hand', initHand);
 
+  const showEvent = createEventHook<void>();
+
   const show = () => {
     const [l, r] = hand.value;
     l.isShown = true;
     r.isShown = true;
+    showEvent.trigger();
   };
+
+  const hideEvent = createEventHook<void>();
 
   const hide = () => {
     const [l, r] = hand.value;
     l.isShown = false;
     r.isShown = false;
+    hideEvent.trigger();
   };
 
   const reset = () => {
     hand.value = initHand();
   };
 
-  return { hand: readonly(hand), show, hide, reset };
+  return {
+    hand: readonly(hand),
+    show,
+    hide,
+    reset,
+    onShow: showEvent.on,
+    onHide: hideEvent.on,
+  };
 };
