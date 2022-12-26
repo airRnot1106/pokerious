@@ -15,17 +15,32 @@
 
   const { card } = toRefs(props);
 
+  const isShown = computed(() => card.value.isShown);
+
   const imageSrc = computed(() =>
-    card.value.isShown ? card.value.image : 'playing_cards/image_back.png'
+    isShown.value ? card.value.image : 'playing_cards/image_back.png'
   );
 
   const { url, onLoaded } = useImage(imageSrc);
 
   onLoaded(() => emits('onLoaded'));
+
+  const imgRef = ref<HTMLImageElement>();
+
+  watch(isShown, (a, b) => {
+    if (a && !b) {
+      const { play, reset } = useCssAnimation(imgRef, 'animate-pulsate-fwd', {
+        endFunc: () => {
+          reset();
+        },
+      });
+      play();
+    }
+  });
 </script>
 
 <template>
   <div>
-    <img :src="url" width="100" />
+    <img ref="imgRef" :src="url" width="80" />
   </div>
 </template>
