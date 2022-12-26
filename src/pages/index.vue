@@ -3,7 +3,7 @@
 
   const { play } = useCssAnimation(heroRef, 'animate-slide-out-bck-center', {
     endFunc: () => {
-      navigateTo('/game');
+      navigateTo('/op');
     },
     duration: 500,
   });
