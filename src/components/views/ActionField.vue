@@ -26,7 +26,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col items-center p-5">
+  <div class="flex flex-col items-center">
     <p class="text-xl">Choose your action</p>
     <div class="mt-3 flex items-center justify-center">
       <button
