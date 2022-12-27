@@ -1,8 +1,10 @@
-import type { Ref as VueRef } from 'vue';
+import type { Ref as VueRef, DeepReadonly as VueDeepReadonly } from 'vue';
 
 /* Utils */
 
 export type Ref<T> = VueRef<T>;
+
+export type DeepReadonly<T> = VueDeepReadonly<T>;
 
 export type Pair<T> = [T, T];
 
@@ -106,3 +108,43 @@ export type ActionNumber = Entries<NumberToAction>[0];
 export type ActionString = Entries<NumberToAction>[1];
 
 export type ActionsType = 0 | 1;
+
+export type ActionResultProperties = {
+  isCorrect: boolean;
+  gtoAction: ActionNumber;
+  yourAction: ActionNumber;
+};
+
+/* HandRange */
+
+type HandRangeTableRow = [
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber,
+  ActionNumber
+];
+
+export type HandRangeTable = [
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow,
+  HandRangeTableRow
+];
