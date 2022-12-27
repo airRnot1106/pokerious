@@ -14,6 +14,9 @@ module.exports = {
         'pulsate-fwd': 'pulsate-fwd 0.5s ease   both',
         'scale-up-center':
           'scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both',
+        'swirl-in-fwd': 'swirl-in-fwd 0.6s ease   both',
+        'rotate-in-2-cw':
+          'rotate-in-2-cw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both',
       },
       keyframes: {
         'slide-in-left': {
@@ -50,6 +53,26 @@ module.exports = {
           },
           'to': {
             transform: 'scale(1)',
+          },
+        },
+        'swirl-in-fwd': {
+          '0%': {
+            transform: 'rotate(-540deg) scale(0)',
+            opacity: '0',
+          },
+          'to': {
+            transform: 'rotate(0) scale(1)',
+            opacity: '1',
+          },
+        },
+        'rotate-in-2-cw': {
+          '0%': {
+            transform: 'rotate(-45deg)',
+            opacity: '0',
+          },
+          'to': {
+            transform: 'rotate(0)',
+            opacity: '1',
           },
         },
       },
