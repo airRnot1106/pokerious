@@ -3,8 +3,9 @@ import type { UnwrapRef } from 'vue';
 export default () => {
   const progress = useState('progress', () => 0);
 
-  const advance = () => {
-    progress.value += 1;
+  const advance = (progressNumber: number) => {
+    if (progress.value >= progressNumber) return;
+    progress.value = progressNumber;
     progressEvent.trigger(progress.value);
   };
 
