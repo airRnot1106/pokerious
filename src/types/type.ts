@@ -89,3 +89,20 @@ export type PositionProperties = {
   position: PositionNumber;
   image: PositionImage;
 };
+
+/* Action */
+
+export type NumberToAction = {
+  0: 'fold';
+  1: 'check';
+  2: 'call';
+  3: 'bet';
+  4: 'raise';
+  5: 'allIn';
+};
+
+export type ActionNumber = Entries<NumberToAction>[0];
+
+export type ActionString = Entries<NumberToAction>[1];
+
+export type ActionsType = 0 | 1;
