@@ -31,11 +31,12 @@ export default (
 
     element.classList.add(cssClass);
 
-    const cleanup = useEventListener(element, 'animationend', async () => {
-      await new Promise((resolve) => setTimeout(resolve, duration));
-      isAnimating.value = false;
-      isEnded.value = true;
-      endFunc();
+    const cleanup = useEventListener(element, 'animationend', () => {
+      setTimeout(() => {
+        isAnimating.value = false;
+        isEnded.value = true;
+        endFunc();
+      }, duration);
       cleanup();
     });
   };
