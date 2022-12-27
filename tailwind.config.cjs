@@ -12,6 +12,8 @@ module.exports = {
         'slide-out-bck-center':
           'slide-out-bck-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530)   both',
         'pulsate-fwd': 'pulsate-fwd 0.5s ease   both',
+        'scale-up-center':
+          'scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both',
       },
       keyframes: {
         'slide-in-left': {
@@ -40,6 +42,14 @@ module.exports = {
           },
           '50%': {
             transform: 'scale(1.1)',
+          },
+        },
+        'scale-up-center': {
+          '0%': {
+            transform: 'scale(.5)',
+          },
+          'to': {
+            transform: 'scale(1)',
           },
         },
       },
