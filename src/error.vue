@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <button>Clear errors</button>
+  <div class="text-light-black">
+    <NuxtLayout></NuxtLayout>
+  </div>
 </template>
