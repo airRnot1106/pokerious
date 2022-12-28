@@ -16,7 +16,8 @@
         <h1 class="text-5xl font-bold">Pokerious</h1>
         <p class="py-6">
           Your preflop improvement will lead you to victory.<br />
-          This app will help you learn the best action based on hand ranges.
+          This app will help you learn the best action (open raise) based on
+          your hand range.
         </p>
         <button class="btn-primary btn" @click="play">Get Started</button>
       </div>

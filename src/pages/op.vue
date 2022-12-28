@@ -123,7 +123,7 @@
       class="btn-primary btn mx-5 mt-1"
       @click="resetGame"
     >
-      Next Problem
+      Next Question
     </button>
   </div>
 </template>
