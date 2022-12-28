@@ -10,6 +10,9 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     baseURL: '/pokerious/',
+    head: {
+      title: 'Pokerious',
+    },
   },
   typescript: {
     tsConfig: {
