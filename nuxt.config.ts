@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   },
   srcDir: 'src',
   ssr: false,
+  app: {
+    cdnURL: '/pokerious/',
+  },
   typescript: {
     tsConfig: {
       extends: '@tsconfig/strictest/tsconfig.json',
