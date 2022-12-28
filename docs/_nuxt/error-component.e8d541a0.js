@@ -1,0 +1,1 @@
+import{c as e,o,a as c,b as r,_}from"./entry.94cbf39e.js";const a={class:"text-light-black"},s={__name:"error",setup(n){return e({redirect:"/"}),(l,m)=>{const t=_;return o(),c("div",a,[r(t)])}}},i=s;export{i as default};
