@@ -7,6 +7,13 @@ export default defineNuxtConfig({
     host: '0.0.0.0',
   },
   srcDir: 'src',
+  ssr: false,
+  app: {
+    baseURL: '/pokerious/',
+    head: {
+      title: 'Pokerious',
+    },
+  },
   typescript: {
     tsConfig: {
       extends: '@tsconfig/strictest/tsconfig.json',
