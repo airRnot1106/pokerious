@@ -1,48 +1,37 @@
 <div align="center">
 <samp>
 
-# nuxt-template-v2
+# Pokerious
 
-## Nuxt3+ESLint+Prettier+TailwindCSS template
+## Texas Hold'em Open Raise Practice App
+
+**_[Go to App](https://airrnot1106.github.io/pokerious/)_**
 
 </samp>
 </div>
 
-## Setup
+## OverView
 
-Make sure to install the dependencies:
+- Simple UI
+- Easy to use
 
-```bash
-# yarn
-yarn install
+## Demo
 
-# npm
-npm install
+<div align="center">
+<img width="1440" alt="demo01" src="https://user-images.githubusercontent.com/62370527/209756181-48bd9bd2-aeaf-4470-a464-8c4904de58f9.png">
+<img width="1440" alt="demo02" src="https://user-images.githubusercontent.com/62370527/209756188-40d7faa2-a649-414c-95f6-bb40b5073502.png">
+</div>
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+## Issues
 
-## Development Server
+If you find a bug or problem, please open an issue!:bug:
 
-Start the development server on http://localhost:3000
+## Author
 
-```bash
-yarn run dev
-```
+- Github: [airRnot1106](https://github.com/airRnot1106)
+- NPM: [airrnot1106](https://www.npmjs.com/~airrnot1106)
+- Twitter: [@airRnot1106](https://twitter.com/airRnot1106)
 
-## Production
+## License
 
-Build the application for production:
-
-```bash
-yarn run build
-```
-
-Locally preview production build:
-
-```bash
-yarn run preview
-```
-
-Check out the [Qiita](https://qiita.com/airRnot1106/items/0be37ee7863825267bb1) for more information.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/airRnot1106/pokerious/blob/main/LICENSE) file for details.
