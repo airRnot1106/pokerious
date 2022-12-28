@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   srcDir: 'src',
   ssr: false,
   app: {
-    cdnURL: '/pokerious/',
+    baseURL: '/pokerious/',
   },
   typescript: {
     tsConfig: {
